@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@assets/*": ["./src/assets/*"],
+      "@context": ["./src/context/index.ts"],
+      "@entities/*": ["./src/entities/*"],
+      "@modules/*": ["./src/modules/*"],
+      "@shared/*": ["./src/shared/*"],
+      "@store/*": ["./src/store/*"],
+      "@views/*": ["./src/views/*"],
+      "@widgets": ["./src/widgets/index.ts"],
+    }
+  }
+}
+
+//  you can choose which path you want to use, like:
+// @services, @interface, @src, ~, @, etc just by changing the keys inside ”paths”: {}

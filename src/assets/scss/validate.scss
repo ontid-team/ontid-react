@@ -1,0 +1,11 @@
+.validate {
+  &-error {
+    input {
+      border: 1px solid red;
+    }
+
+    .ui-select__control {
+      border-color: red !important;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.validate {
+  &-text {
+    position: absolute;
+    font-size: 9px;
+    padding: 0 20px;
+    border-radius: 4px;
+    color: red !important;
+    z-index: 5;
+    width: 100%;
+    top: inherit !important;
+    text-align: left;
+  }
+
+  &-top {
+    bottom: -20px !important;
+    left: 0 !important;
+    white-space: nowrap;
+  }
+
+  &-bottom {
+    bottom: -20px !important;
+    left: 0 !important;
+    white-space: nowrap;
+  }
+}

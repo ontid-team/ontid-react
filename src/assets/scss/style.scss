@@ -1,0 +1,42 @@
+blockquote,
+body,
+code,
+dd,
+div,
+dl,
+dt,
+fieldset,
+form,
+input,
+pre,
+td,
+textarea,
+th {
+  margin: 0;
+  padding: 0;
+}
+* {
+  box-sizing: border-box;
+  max-height: 100000px;
+  font-family: Basis Grotesque Pro;
+}
+li {
+  list-style-type: none;
+}
+ul {
+  padding-left: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+textarea,
+input {
+  outline: none;
+  border: none;
+}
+button {
+  outline: none;
+  cursor: pointer;
+}
