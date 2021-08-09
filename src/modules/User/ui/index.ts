@@ -1,2 +1,2 @@
-export { default as UIAvatar } from './Avatar';
-export { default as UIName } from './Name';
+export { default as UserUIAvatar } from './Avatar';
+export { default as UserUIName } from './Name';

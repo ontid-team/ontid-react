@@ -1,7 +1,7 @@
 import { Props } from './index.type';
 
-const UIAvatar = ({ img }: Props) => {
+const UserUIAvatar = ({ img }: Props) => {
   return <div>{img}</div>;
 };
 
-export default UIAvatar;
+export default UserUIAvatar;

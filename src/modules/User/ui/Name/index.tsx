@@ -1,7 +1,7 @@
 import { Props } from './index.type';
 
-const UIName = ({ fullName }: Props) => {
+const UserUIName = ({ fullName }: Props) => {
   return <div>Name: {fullName}</div>;
 };
 
-export default UIName;
+export default UserUIName;
