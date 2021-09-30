@@ -1,18 +1,22 @@
-import { ChatUser, Message } from '@entities/Chat';
+import { Chat, ChatMessage, Dialog } from '@entities/Chat';
 
 import {
-  SET_USER,
+  SET_CHAT,
   SET_NUMBER_OF_UNREAD,
   SET_CONNECTED_USER,
+  SET_MESSAGE_RECEIVE,
   SET_MESSAGE_SEND,
+  SET_DIALOG_ID,
+  SET_DIALOG_USER,
+  SET_ALL_MESSAGE,
 } from './Chat.constant';
 import { ChatActionsTypes } from './Chat.type';
 
-export function setUser(users: ChatUser[]): ChatActionsTypes {
+export function setChat(chats: Chat[]): ChatActionsTypes {
   return {
-    type: SET_USER,
+    type: SET_CHAT,
     payload: {
-      users,
+      chats,
     },
   };
 }
@@ -39,11 +43,47 @@ export function setConnectedUser(
   };
 }
 
-export function setMessageSend(message: Message): ChatActionsTypes {
+export function setMessageReceive(chat: Chat): ChatActionsTypes {
+  return {
+    type: SET_MESSAGE_RECEIVE,
+    payload: {
+      chat,
+    },
+  };
+}
+
+export function setMessageSend(
+  payload: Pick<ChatMessage, 'message' | 'userId'>,
+): ChatActionsTypes {
   return {
     type: SET_MESSAGE_SEND,
+    payload,
+  };
+}
+
+export function setDialogId(id: number | null): ChatActionsTypes {
+  return {
+    type: SET_DIALOG_ID,
     payload: {
-      message,
+      id,
+    },
+  };
+}
+
+export function setDialogUser(user: Dialog['user'] | null): ChatActionsTypes {
+  return {
+    type: SET_DIALOG_USER,
+    payload: {
+      user,
+    },
+  };
+}
+
+export function setAllMessage(messages: ChatMessage[]): ChatActionsTypes {
+  return {
+    type: SET_ALL_MESSAGE,
+    payload: {
+      messages,
     },
   };
 }

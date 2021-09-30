@@ -1,10 +1,10 @@
 import cn from 'classnames';
-
-import { history } from '@shared/utils';
+import { useHistory } from 'react-router-dom';
 
 import { Props } from './index.type';
 
 const UIButton = (props: Props) => {
+  const history = useHistory();
   const {
     link,
     handler,

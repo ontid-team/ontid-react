@@ -7,7 +7,7 @@ import {
 } from './Language.constant';
 
 export interface ILanguageState {
-  languages: FullLanguage[];
+  languageList: FullLanguage[];
   loading: boolean;
   loaded: boolean;
 }
@@ -18,9 +18,7 @@ interface IGetListLanguageRequest {
 
 interface IGetListLanguageSuccess {
   type: typeof GET_LIST_LANGUAGE_SUCCESS;
-  payload: {
-    languages: FullLanguage[];
-  };
+  payload: DataResponse<FullLanguage[]>;
 }
 
 interface IGetListLanguageFailure {

@@ -32,10 +32,12 @@ const getStore = () => {
       compose(getMiddleware(), composeEnhancers()),
     );
   }
+
   return createStore(rootReducer, getMiddleware());
 };
 
 const store = getStore();
+
 export type AppDispatch = typeof store.dispatch;
 export const useAppDispatch = () => useDispatch<AppDispatch>();
 

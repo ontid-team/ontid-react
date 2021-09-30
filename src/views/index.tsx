@@ -13,4 +13,5 @@ const View = () => {
     </Switch>
   );
 };
+
 export default View;

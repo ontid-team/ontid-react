@@ -14,13 +14,11 @@ export function getListLanguageRequest(): LanguageActionsTypes {
 }
 
 export function getListLanguageSuccess(
-  languages: FullLanguage[],
+  payload: DataResponse<FullLanguage[]>,
 ): LanguageActionsTypes {
   return {
     type: GET_LIST_LANGUAGE_SUCCESS,
-    payload: {
-      languages,
-    },
+    payload,
   };
 }
 

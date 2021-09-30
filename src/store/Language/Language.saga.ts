@@ -1,7 +1,7 @@
 import { put, takeLatest, fork, call, ForkEffect } from 'redux-saga/effects';
 
 import { FullLanguage } from '@entities/Language';
-import { LanguageHttp } from '@shared/services/http';
+import { LanguageHttp } from '@services/http';
 
 import {
   getListLanguageSuccess,
@@ -11,9 +11,9 @@ import { GET_LIST_LANGUAGE_REQUEST } from './Language.constant';
 
 function* workerGetListLanguage() {
   try {
-    const languages: FullLanguage[] = yield call(LanguageHttp.getList);
+    const res: DataResponse<FullLanguage[]> = yield call(LanguageHttp.getList);
 
-    yield put(getListLanguageSuccess(languages));
+    yield put(getListLanguageSuccess(res));
   } catch (error) {
     yield put(getListLanguageFailure());
   }

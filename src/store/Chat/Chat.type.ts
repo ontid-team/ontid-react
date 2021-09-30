@@ -1,22 +1,28 @@
-import { ChatUser, Message } from '@entities/Chat';
+import { ChatMessage, Chat, Dialog } from '@entities/Chat';
 
 import {
-  SET_USER,
+  SET_CHAT,
   SET_NUMBER_OF_UNREAD,
   SET_CONNECTED_USER,
+  SET_MESSAGE_RECEIVE,
   SET_MESSAGE_SEND,
+  SET_DIALOG_ID,
+  SET_DIALOG_USER,
+  SET_ALL_MESSAGE,
 } from './Chat.constant';
 
 export interface IChatState {
-  users: ChatUser[];
+  chatList: Chat[];
+  messageList: ChatMessage[];
+  dialogUser: Dialog['user'] | null;
+  dialogId: Dialog['id'] | null;
   numberOfUnread: number;
-  messages: Message[];
 }
 
-interface ISetUser {
-  type: typeof SET_USER;
+interface ISetChat {
+  type: typeof SET_CHAT;
   payload: {
-    users: ChatUser[];
+    chats: Chat[];
   };
 }
 
@@ -35,15 +41,45 @@ interface ISetConnectedUser {
   };
 }
 
+interface ISetMessageReceive {
+  type: typeof SET_MESSAGE_RECEIVE;
+  payload: {
+    chat: Chat;
+  };
+}
+
 interface ISetMessageSend {
   type: typeof SET_MESSAGE_SEND;
+  payload: Pick<ChatMessage, 'message' | 'userId'>;
+}
+
+interface ISetDialogId {
+  type: typeof SET_DIALOG_ID;
   payload: {
-    message: Message;
+    id: number | null;
+  };
+}
+
+interface ISetDialogUser {
+  type: typeof SET_DIALOG_USER;
+  payload: {
+    user: Dialog['user'] | null;
+  };
+}
+
+interface ISetALLMessage {
+  type: typeof SET_ALL_MESSAGE;
+  payload: {
+    messages: ChatMessage[];
   };
 }
 
 export type ChatActionsTypes =
-  | ISetUser
+  | ISetChat
   | ISetNumberOfUnread
   | ISetConnectedUser
-  | ISetMessageSend;
+  | ISetMessageReceive
+  | ISetMessageSend
+  | ISetDialogId
+  | ISetDialogUser
+  | ISetALLMessage;

@@ -6,7 +6,7 @@ import {
 import { ILanguageState, LanguageActionsTypes } from './Language.type';
 
 const initialState: ILanguageState = {
-  languages: [],
+  languageList: [],
   loading: false,
   loaded: false,
 };
@@ -24,7 +24,7 @@ export default function languageReducer(
     case GET_LIST_LANGUAGE_SUCCESS: {
       return {
         ...state,
-        languages: action.payload.languages,
+        languageList: action.payload.data,
         loaded: true,
       };
     }
