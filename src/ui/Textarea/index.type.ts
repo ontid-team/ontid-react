@@ -1,16 +1,16 @@
 export type Props = {
+  className?: string;
+  disabled?: boolean;
+  isValid?: boolean;
   label?: string;
   name: string;
-  value: string | number | undefined;
-  className?: string;
-  placeholder?: string;
-  disabled?: boolean;
-  required?: boolean;
-  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
   onBlur?: (value?: string | number) => void;
+  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
   onKeyPress?: (value?: string | number) => void;
-  isValid?: boolean;
+  placeholder?: string;
+  prop?: any;
+  required?: boolean;
   validateText?: string;
   validationTextPosition?: 'top' | 'bottom';
-  prop?: any;
+  value: string | number | undefined;
 };

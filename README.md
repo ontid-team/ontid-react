@@ -6,14 +6,36 @@
 
 1. Press `Clone` button.
 
-## Structure
+2. Install and run:
 
-- `src/modules` — it is useful functionality for user or suite of entities which are united by one idea. For instance: users, text-editor, account, articles.
-- `src/shared/ui` — All UI are building blocks which allow to create any feature. Components must be maximally reusable and independent on context (not React Context API).
+```bash
+yarn install
+yarn start
+```
 
 ## PullRequest
 
-  - [ ] This PullRequest implements new feature, fix bug, or some other changes
+  - [ ] This PR implements new feature, fix bug, or some other changes
   - [ ] If PR is not ready to review mark it as Draft
   - [ ] All commits in this PR should be created by `npm commit` by [conventional-commits](https://www.conventionalcommits.org/en/v1.0.0/)
-  - [ ] Title of the PullRequest should have issue(s) identifier(s) ("BOX-123 Example title of PR")
+  - [ ] Title of the PR should have issue(s) identifier(s) ("BOX-123 Example title of PR")
+
+## Project Structure
+
+| Name                        | Description                                             |
+| --------------------------- | ------------------------------------------------------- |
+| **src/**                    | Source files                                            |
+| **tests/**                  | Test cases will be placed here                          |
+| **tests/unit/**             | Unit Test cases will be placed here                     |
+| **tests/e2e/**              | E2E testing                                             |
+| **tests/integration/**      | API routes (Integration) Test cases will be placed here |
+## Notes
+
+### 1. Why is my git pre-commit hook not executable by default?
+
+- Because files are not executable by default; they must be set to be executable.
+
+```
+chmod ug+x .husky/*
+chmod ug+x .git/hooks/*
+```

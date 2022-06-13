@@ -1,7 +1,7 @@
 export type Profile = {
+  firstName: string;
   fullName: string;
   lastName: string;
-  firstName: string;
 };
 
 export type FullProfile = Profile;

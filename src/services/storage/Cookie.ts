@@ -1,13 +1,24 @@
 import { parse } from 'cookie';
 
+import { COOKIE_ACCESS_TOKEN } from '@utils';
+import { JWTHelper } from '@utils/helpers';
+
 export default (() => {
-  const getUserId = (): number | null => {
-    const { userId } = parse(document.cookie || '');
+  const parseToken = (cookie?: string): TokenPayload | null => {
+    if (typeof window !== 'undefined' || cookie) {
+      const cookies = parse(
+        typeof window !== 'undefined' ? document?.cookie || '' : cookie || '',
+      );
 
-    return userId ? +userId : null;
+      const payload = JWTHelper.decode<TokenPayload>(
+        (cookies && cookies[COOKIE_ACCESS_TOKEN]) || '',
+      );
+
+      return payload;
+    }
+
+    return null;
   };
 
-  return {
-    getUserId,
-  };
+  return { parseToken };
 })();

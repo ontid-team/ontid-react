@@ -6,17 +6,17 @@ export interface IAlertState {
 }
 
 interface IAlertSuccess {
-  type: typeof ALERT_SUCCESS;
   payload: {
     message: string;
   };
+  type: typeof ALERT_SUCCESS;
 }
 
 interface IAlertError {
-  type: typeof ALERT_ERROR;
   payload: {
     message: string;
   };
+  type: typeof ALERT_ERROR;
 }
 
 interface IAlertClear {

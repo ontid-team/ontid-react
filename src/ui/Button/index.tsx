@@ -3,16 +3,15 @@ import { useHistory } from 'react-router-dom';
 
 import { Props } from './index.type';
 
-const UIButton = (props: Props) => {
+const UIButton = ({
+  link,
+  handler,
+  children,
+  className = '',
+  disabled = false,
+  defaultClassName = 'btn',
+}: Props) => {
   const history = useHistory();
-  const {
-    link,
-    handler,
-    children,
-    className = '',
-    disabled = false,
-    defaultClassName = 'btn',
-  } = props;
 
   return (
     <button

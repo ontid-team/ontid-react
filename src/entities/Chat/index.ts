@@ -7,21 +7,21 @@ export type ChatUser = {
 };
 
 export type ChatMessage = {
+  createdAt: Date | string;
   id: number | null;
   isRead: boolean;
-  userId: number;
   message: string;
-  createdAt: Date | string;
+  userId: number;
 };
 
 export type Chat = Pick<ChatMessage, 'id'> & {
-  user: ChatUser | null;
   message: ChatMessage;
+  user: ChatUser | null;
 };
 
 export type Dialog = Id & {
-  user: ChatUser;
   messages: ChatMessage[];
+  user: ChatUser;
 };
 
 export type FullChat = {
@@ -32,10 +32,10 @@ export type FullChat = {
 // eslint-disable-next-line @typescript-eslint/naming-convention
 export enum chatEvent {
   CHAT = 'chat',
-  USER_CONNECTED = 'user:connected',
-  USER_DISCONNECTED = 'user:disconnected',
+  DIALOG = 'dialog',
   MESSAGE_NUMBER_OF_UNREAD = 'message:numberOfUnread',
   MESSAGE_RECEIVE = 'message:receive',
   MESSAGE_SEND = 'message:send',
-  DIALOG = 'dialog',
+  USER_CONNECTED = 'user:connected',
+  USER_DISCONNECTED = 'user:disconnected',
 }

@@ -13,8 +13,8 @@ import {
 } from '@store/Chat';
 
 export const initChatSubscribe = (params: {
-  socket: Socket;
   dispatch: Dispatch;
+  socket: Socket;
 }) => {
   const { socket, dispatch } = params;
 
@@ -44,7 +44,7 @@ export const initChatSubscribe = (params: {
 
   socket.on(
     chatEvent.DIALOG,
-    (data: { user: Dialog['user']; messages: ChatMessage[] }) => {
+    (data: { messages: ChatMessage[]; user: Dialog['user'] }) => {
       dispatch(setAllMessage(data.messages));
       dispatch(setDialogUser(data.user));
     },
@@ -58,9 +58,9 @@ export const getDialog = (params: { chatId: number; socket: Socket }) => {
 };
 
 export const sendMessage = (params: {
+  dispatch: Dispatch;
   message: Pick<ChatMessage, 'message' | 'userId'> & { chatId: number };
   socket: Socket;
-  dispatch: Dispatch;
 }) => {
   const {
     socket,

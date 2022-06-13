@@ -13,65 +13,65 @@ import {
 
 export interface IChatState {
   chatList: Chat[];
-  messageList: ChatMessage[];
-  dialogUser: Dialog['user'] | null;
   dialogId: Dialog['id'] | null;
+  dialogUser: Dialog['user'] | null;
+  messageList: ChatMessage[];
   numberOfUnread: number;
 }
 
 interface ISetChat {
-  type: typeof SET_CHAT;
   payload: {
     chats: Chat[];
   };
+  type: typeof SET_CHAT;
 }
 
 interface ISetNumberOfUnread {
-  type: typeof SET_NUMBER_OF_UNREAD;
   payload: {
     numberOfUnread: number;
   };
+  type: typeof SET_NUMBER_OF_UNREAD;
 }
 
 interface ISetConnectedUser {
-  type: typeof SET_CONNECTED_USER;
   payload: {
-    userId: number;
     connected: boolean;
+    userId: number;
   };
+  type: typeof SET_CONNECTED_USER;
 }
 
 interface ISetMessageReceive {
-  type: typeof SET_MESSAGE_RECEIVE;
   payload: {
     chat: Chat;
   };
+  type: typeof SET_MESSAGE_RECEIVE;
 }
 
 interface ISetMessageSend {
-  type: typeof SET_MESSAGE_SEND;
   payload: Pick<ChatMessage, 'message' | 'userId'>;
+  type: typeof SET_MESSAGE_SEND;
 }
 
 interface ISetDialogId {
-  type: typeof SET_DIALOG_ID;
   payload: {
     id: number | null;
   };
+  type: typeof SET_DIALOG_ID;
 }
 
 interface ISetDialogUser {
-  type: typeof SET_DIALOG_USER;
   payload: {
     user: Dialog['user'] | null;
   };
+  type: typeof SET_DIALOG_USER;
 }
 
 interface ISetALLMessage {
-  type: typeof SET_ALL_MESSAGE;
   payload: {
     messages: ChatMessage[];
   };
+  type: typeof SET_ALL_MESSAGE;
 }
 
 export type ChatActionsTypes =

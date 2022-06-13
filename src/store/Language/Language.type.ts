@@ -8,8 +8,8 @@ import {
 
 export interface ILanguageState {
   languageList: FullLanguage[];
-  loading: boolean;
   loaded: boolean;
+  loading: boolean;
 }
 
 interface IGetListLanguageRequest {
@@ -17,8 +17,8 @@ interface IGetListLanguageRequest {
 }
 
 interface IGetListLanguageSuccess {
-  type: typeof GET_LIST_LANGUAGE_SUCCESS;
   payload: DataResponse<FullLanguage[]>;
+  type: typeof GET_LIST_LANGUAGE_SUCCESS;
 }
 
 interface IGetListLanguageFailure {

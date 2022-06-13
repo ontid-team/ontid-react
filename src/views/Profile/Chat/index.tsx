@@ -1,15 +1,5 @@
-import { Route, Switch, useRouteMatch } from 'react-router-dom';
-
-import ViewProfileChat from './Chat';
-
-const ViewProfileChatRoot = () => {
-  const { path } = useRouteMatch();
-
-  return (
-    <Switch>
-      <Route path={`${path}/`} component={ViewProfileChat} />
-    </Switch>
-  );
+const ViewProfileChat = () => {
+  return <div>Chat views</div>;
 };
 
-export default ViewProfileChatRoot;
+export default ViewProfileChat;

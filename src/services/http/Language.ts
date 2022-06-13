@@ -1,13 +1,10 @@
-import { AxiosResponse } from 'axios';
-
 import { FullLanguage } from '@entities/Language';
-import { http } from '@shared/utils';
+import { http } from '@utils';
+
+const basePath = '/api/languages';
 
 export const getList = async (): Promise<DataResponse<FullLanguage[]>> => {
-  const { data }: AxiosResponse<DataResponse<FullLanguage[]>> = await http({
-    method: 'GET',
-    url: '/api/languages',
-  });
+  const { data } = await http.get<DataResponse<FullLanguage[]>>(basePath);
 
   return data;
 };

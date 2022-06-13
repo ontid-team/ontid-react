@@ -1,5 +1,6 @@
 import { AuthLogin } from '@modules/Auth';
-import { UIButton } from '@shared/ui';
+import { UIButton } from '@ui';
+import { LINK_REGISTER, LINK_FORGOT_PASSWORD } from '@utils';
 
 import './styles.scss';
 
@@ -12,11 +13,11 @@ const ViewAuthLogin = () => {
         <div className="signUpIn-main__haveAccount">
           <div>
             Don’t have an account?{' '}
-            <UIButton link="/auth/register" children="Sign up" />
+            <UIButton link={LINK_REGISTER} children="Sign up" />
           </div>
           <div>
             Don’t remember your password?{' '}
-            <UIButton link="/auth/forgot-password" children="Recover passord" />
+            <UIButton link={LINK_FORGOT_PASSWORD} children="Recover passord" />
           </div>
         </div>
       </div>

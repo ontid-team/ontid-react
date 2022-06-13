@@ -1,27 +1,24 @@
 import cn from 'classnames';
 
-import UIError from '@shared/ui/Error';
-
+import UIError from '../Error';
 import { Props } from './index.type';
 
-const UITextarea = (props: Props) => {
-  const {
-    label,
-    name,
-    value,
-    className,
-    placeholder,
-    disabled = false,
-    required = true,
-    onChange,
-    onBlur,
-    onKeyPress,
-    isValid = true,
-    validateText,
-    validationTextPosition = 'bottom',
-    prop,
-  } = props;
-
+const UITextarea = ({
+  label,
+  name,
+  value,
+  className,
+  placeholder,
+  disabled = false,
+  required = true,
+  onChange,
+  onBlur,
+  onKeyPress,
+  isValid = true,
+  validateText,
+  validationTextPosition = 'bottom',
+  prop,
+}: Props) => {
   const handlerChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (onChange) {
       onChange(event);

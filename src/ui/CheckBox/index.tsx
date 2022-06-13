@@ -1,17 +1,15 @@
 import { Props } from './index.type';
 
-const UICheckBox = (props: Props) => {
-  const {
-    id,
-    name,
-    value,
-    checked,
-    readOnly = true,
-    className,
-    onChange,
-    label,
-  } = props;
-
+const UICheckBox = ({
+  id,
+  name,
+  value,
+  checked,
+  readOnly = true,
+  className,
+  onChange,
+  label,
+}: Props) => {
   const handlerChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (onChange) {
       onChange(event);

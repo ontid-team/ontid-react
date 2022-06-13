@@ -1,12 +1,12 @@
-import { Role } from '@shared/utils';
+import { Role } from '@utils';
 
 import { FullProfile } from './Profile.model';
 
 type User = {
   email: string;
   password: string;
-  role: Role.USER;
   profile: FullProfile;
+  role: Role.USER;
 };
 
 export type FullUser = User;

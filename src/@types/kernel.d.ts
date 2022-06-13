@@ -19,14 +19,14 @@ type Params<P> = {
 };
 
 type Token = {
-  tokenType: string;
   accessToken: string;
   refreshToken: string;
+  tokenType: string;
 };
 
 type PageType = {
-  limit: number;
   currentPage: number;
+  limit: number;
 };
 
 type MetaType = PageType & {
@@ -34,19 +34,27 @@ type MetaType = PageType & {
   hasPrevPage: boolean;
   nextPage: number;
   prevPage: number;
-  totalPages: number;
   totalItems: number;
+  totalPages: number;
+};
+
+type TokenPayload = {
+  email: string;
+  role: string;
+  userId: string;
 };
 
 type DataResponse<T> = {
-  status: number;
   code: string;
-  message: string;
-  errors?: { [key: string]: string };
   data: T;
+  errors?: { [key: string]: string };
+  message: string;
   meta: MetaType;
+  status: number;
 };
 
 type Query = {
   query: string;
 };
+
+type DateCtx = string | number | Date;

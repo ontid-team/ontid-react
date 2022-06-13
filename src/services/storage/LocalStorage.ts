@@ -1,19 +1,23 @@
 export default (() => {
-  const setInvited = (invitedId: string): void => {
-    localStorage.setItem('invitedId', invitedId);
+  const set = (key: string, data: string): void => {
+    if (typeof window !== 'undefined') {
+      localStorage.setItem(key, data);
+    }
   };
 
-  const getInvited = (): string | null => {
-    return localStorage.getItem('invitedId');
+  const get = (key: string): string | null => {
+    if (typeof window !== 'undefined') {
+      return localStorage.getItem(key);
+    }
+
+    return null;
   };
 
-  const clearInvited = (): void => {
-    localStorage.removeItem('invitedId');
+  const removeItem = (key: string): void => {
+    if (typeof window !== 'undefined') {
+      localStorage.removeItem(key);
+    }
   };
 
-  return {
-    setInvited,
-    getInvited,
-    clearInvited,
-  };
+  return { set, get, removeItem };
 })();

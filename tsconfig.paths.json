@@ -5,16 +5,17 @@
       "@assets/*": ["./src/assets/*"],
       "@context": ["./src/context/index.ts"],
       "@entities/*": ["./src/entities/*"],
+      "@hooks": ["./src/hooks/index.ts"],
+      "@i18n": ["./src/i18n/index.ts"],
       "@layouts": ["./src/layouts/index.ts"],
       "@modules/*": ["./src/modules/*"],
       "@services/*": ["./src/services/*"],
-      "@shared/*": ["./src/shared/*"],
+      "@ui": ["./src/ui/index.ts"],
+      "@utils": ["./src/utils/index.ts"],
+      "@utils/helpers": ["./src/utils/helpers/index.ts"],
       "@store/*": ["./src/store/*"],
       "@views/*": ["./src/views/*"],
       "@widgets": ["./src/widgets/index.ts"],
     }
   }
 }
-
-//  you can choose which path you want to use, like:
-// @services, @interface, @src, ~, @, etc just by changing the keys inside ”paths”: {}
