@@ -1,0 +1,15 @@
+export const SET_CHAT = '@chat/SET_CHAT';
+export const SET_COUNT_OF_UNREAD = '@chat/SET_COUNT_OF_UNREAD';
+export const SET_CONNECTED_USER = '@chat/SET_CONNECTED_USER';
+export const SET_MESSAGE_RECEIVE = '@chat/SET_MESSAGE_RECEIVE';
+export const SET_MESSAGE_SEND = '@chat/SET_MESSAGE_SEND';
+export const SET_DIALOG_ID = '@chat/SET_DIALOG_ID';
+export const SET_DIALOG = '@chat/SET_DIALOG';
+
+export const GET_DIALOG_REQUEST = '@chat/GET_DIALOG_REQUEST';
+export const GET_DIALOG_SUCCESS = '@chat/GET_DIALOG_SUCCESS';
+export const GET_DIALOG_FAILURE = '@chat/GET_DIALOG_FAILURE';
+
+export const CREATE_MESSAGE_REQUEST = '@chat/CREATE_MESSAGE_REQUEST';
+export const CREATE_MESSAGE_SUCCESS = '@chat/CREATE_MESSAGE_SUCCESS';
+export const CREATE_MESSAGE_FAILURE = '@chat/CREATE_MESSAGE_FAILURE';

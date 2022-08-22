@@ -1,20 +1,24 @@
-  <!-- Please, review this guidelines and check marks on complete each -->
+# Description
 
-  ### Branch name
+Please include a summary of the changes and the related issue. Please also include relevant motivation and context. List any dependencies that are required for this change.
 
-  - [ ] Your branch should be prefixed with `BOX-`
-  - [ ] Add issue identifier
+Fixes # (issue)
 
-  Example:
+## Type of change
 
-  ```
-  BOX-123
-  BOX-1
-  ```
+Please delete options that are not relevant.
 
-  ### PullRequest
+- [ ] Bug fix (non-breaking change which fixes an issue)
+- [ ] New feature (non-breaking change which adds functionality)
+- [ ] Breaking change (fix or feature that would cause existing functionality to not work as expected)
+- [ ] This change requires a documentation update
 
-  - [ ] This PR implements new feature, fix bug, or some other changes
-  - [ ] If PR is not ready to review mark it as Draft
-  - [ ] All commits in this PR should be created by `yarn commit` by [conventional-commits](https://www.conventionalcommits.org/en/v1.0.0/)
-  - [ ] Title of the PR should have issue(s) identifier(s) ("BOOX-123 Example title of PR")
+
+# Checklist:
+- [ ] My code follows the style guidelines of this project
+- [ ] I have performed a self-review of my code
+- [ ] I have commented my code, particularly in hard-to-understand areas
+- [ ] My changes generate no new warnings
+- [ ] If it is a core feature, I have added thorough tests.
+- [ ] Mark if documentation changes are required.
+- [ ] Mark if tests were added or updated to cover the changes.

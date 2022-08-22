@@ -1,0 +1,10 @@
+{
+  "validate.phone.required": "Phone is required",
+  "validate.email.valid": "Enter a valid email",
+  "validate.email.required": "Email is required",
+  "validate.firstName.required": "Your first name is required",
+  "validate.lastName.required": "Your last name is required",
+  "validate.language.required": "Language is required",
+  "validate.password.min": "Password should be of minimum {size} characters length",
+  "validate.password.required": "Password is required"
+}
